@@ -1,0 +1,81 @@
+:host {
+    width: 80%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.country {
+    &-wrapper {
+        padding: 25px;
+    }
+
+    &-flag {
+        display: flex;
+        border: 1px solid #ccc;
+        height: max-content;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    &-title {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    &-facts {
+        padding: 0 15px;
+        font-size: 18px;
+    }
+}
+
+carousel {
+    height: 40vh !important;
+}
+
+@media screen and (max-width: 767px) {
+    :host {
+        width: 100%;
+    }
+
+    carousel {
+        margin-bottom: 5px;
+        height: 25vh !important;
+    }
+
+    .country {
+        &-wrapper {
+            padding: 10px 10px 0;
+        }
+
+        &-flag {
+            margin-right: 10px;
+            float: left;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        &-title {
+            max-width: 50%;
+            margin: auto auto 5px;
+            font-size: 15px;
+        }
+
+        &-facts {
+            padding: 0;
+            font-size: 13px;
+            text-align: justify;
+        }
+
+        &-fact {
+            margin-bottom: 3px;
+        }
+
+        &-content {
+            display: block;
+        }
+    }
+}

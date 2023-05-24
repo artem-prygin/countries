@@ -1,0 +1,31 @@
+<div class="country-wrapper"
+     *ngIf="country; else noData">
+    <h2 class="bold mb-20 country-title">{{country.title}}. Фотографии и 10 фактов о стране</h2>
+
+    <carousel class="mb-20"
+              [pauseOnHover]="true"
+              [images]="images"
+              [loop]="true"
+              [cellsToShow]="cellsToShow">
+    </carousel>
+
+    <div class="country-content d-flex">
+        <div class="country-flag">
+            <img src="{{country.flag}}"
+                 alt="{{country.title}}">
+        </div>
+
+        <div class="country-facts">
+            <div class="mb-10 country-fact"
+                 *ngFor="let fact of country.facts; index as index">
+                {{ index + 1 }}. {{ fact }}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<ng-template #noData>
+    No Data
+</ng-template>

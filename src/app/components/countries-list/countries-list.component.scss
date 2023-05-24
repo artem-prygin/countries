@@ -1,0 +1,50 @@
+.countries {
+    width: 20%;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    transition: width .3s;
+
+    .country {
+        padding: 20px 10px;
+        cursor: pointer;
+        transition: .3s background-color;
+
+        &-active, &:hover {
+            background: #ddd;
+        }
+    }
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .countries {
+        position: absolute;
+        width: 0;
+        overflow: hidden;
+        border: none;
+        background: #fff;
+        z-index: 10002;
+
+        &.full-width {
+            width: 100vw;
+        }
+    }
+
+    .burger {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 40px;
+        padding: 10px;
+        background: #fff;
+        z-index: 10001;
+
+        img {
+            width: 100%;
+        }
+    }
+}

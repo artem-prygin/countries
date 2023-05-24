@@ -1,0 +1,19 @@
+<div class="d-flex">
+    <ul class="countries"
+        [class.full-width]="menuOpen">
+        <li class="country"
+            [class.country-active]="activeCountryInfo.id === country.id"
+            (click)="changeActiveCountry(country.id)"
+            *ngFor="let country of countriesList">
+            {{ country.title }}
+        </li>
+    </ul>
+
+    <div class="burger"
+         (click)="openMenu()">
+        <img src="assets/menu.png"
+             alt="menu">
+    </div>
+
+    <app-country-info [country]="activeCountryInfo"></app-country-info>
+</div>
