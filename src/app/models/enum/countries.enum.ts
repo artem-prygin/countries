@@ -6,4 +6,11 @@ export enum CountriesEnum {
     Algeria = 'algeria',
     AmericanSamoa = 'c',
     Anguilla = 'anguilla',
+    England = 'england',
+    Angola = 'angola',
+    Andorra = 'andorra',
+    Antigua = 'antigua',
+    Argentina = 'argentina',
+    Armenia = 'armenia',
+    Afghanistan = 'afghanistan',
 }
